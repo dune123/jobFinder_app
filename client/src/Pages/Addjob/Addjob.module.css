@@ -1,0 +1,33 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+
+.container{
+    height:130vh;
+    width:100vw;
+    display: flex;
+}
+
+.leftcontainer{
+    width:57vw;
+    height:100%;
+}
+
+.rightcontainer{
+    width:43vw;
+    height:100%;
+}
+
+.rightcontainer img{
+    width:100%;
+    height:100%;
+}
+
+.rightcontainer h1{
+    position: absolute;
+    right:6vw;
+    top:4vw;
+    color: white;
+}

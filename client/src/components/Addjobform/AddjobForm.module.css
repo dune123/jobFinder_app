@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+
+.container{
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading{
+    width:90%;
+    margin-top:4vh;
+    margin-bottom: 4vh;
+}
+
+.heading h1{
+    font-weight: 500;
+    font-size:7vh;
+}
+
+/*
+font-weight: 300;
+    font-size:3vh;
+    gap:2vh;
+*/
+
+.inputform{
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    font-size:3vh;
+    gap:2vh;
+    width:90%;
+}
+
+.inputform .inputcontainer{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+}
+
+.inputcontainer input{
+    width:30vw;
+    padding-left: 1vw;
+    height:5vh;
+}
+
+.inputcontainer textarea{
+    width:30vw;
+    padding-left: 1vw;
+    height:10vh;
+    padding-top:1vh;
+    margin-bottom:2vh;
+}
+
+.buttons{
+    width:90%;
+    margin-top:3vh;
+    padding-left:48vw;
+    display: flex;
+    gap:2vw;
+}
+
+.buttons button{
+    width:10vw;
+    height:5vh;
+    border:none;
+    border-radius: 1vh;
+    cursor: pointer;
+}
+
+.inputcontainer .skillscontainer{
+    height:10vh;
+    display: flex;
+    flex-direction: column;
+    gap:1vh;
+}
+
+.skillscontainer input{
+    height:5vh;
+}
+
+.skillscontainer .selectedskills{
+    width:100%;
+}
+
+.selectedskills{
+    display: flex;
+    gap:1vw;
+    align-items: center;
+}
+
+.diffskills{
+    height:4vh;
+    background-color:#FFEEEE;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

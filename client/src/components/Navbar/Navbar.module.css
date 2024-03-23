@@ -1,0 +1,57 @@
+.Navbarcontainer{
+    height:20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#ED5353 ;
+    border-bottom-left-radius: 5vh;
+    border-bottom-right-radius: 5vh;
+}
+
+.Navbarcontainer h1{
+    margin-left: 10vw;
+    color:white;
+}
+
+.Navbarcontainer .buttonContainer{
+    margin-right:10vw;
+}
+
+.buttonContainer{
+    display: flex;
+    gap:1vw;
+}
+
+.buttonContainer button{
+    height:5vh;
+    width:8vw;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login{
+    border:1px solid white;
+    background-color: #ED5353;
+    color: white;
+}
+
+.register{
+    color:#ED5353;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.Logout{
+    color:white;
+    cursor: pointer;
+    margin-right: 1vw;
+}
+
+.loginmessage{
+    color:white;
+}
+
+
+
+
+

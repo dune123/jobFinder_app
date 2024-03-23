@@ -1,0 +1,58 @@
+*{
+    margin: 0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+    gap:2vh;
+}
+
+.heading{
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    gap:1vh;
+}
+
+.inputform{
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    gap:2.5vh;
+    height:67vh;
+}
+
+.inputform input{
+    height:16%;
+    padding-left: 1.5vw;
+    border: 1px solid #C2C2C2;
+    color:#C2C2C2;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+}
+.checkbox span{
+    margin-left: 1vw;
+    color:#C2C2C2
+}
+.checkbox .box{
+    height:2vh;
+}
+
+.inputform button{
+    width:50%;
+    height:9vh;
+    background-color:#ED5353;
+    border:none;
+    color:white;
+    font-weight: 400;
+    font-size: 5vh;
+    cursor: pointer;
+}

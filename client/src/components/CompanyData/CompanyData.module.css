@@ -1,0 +1,100 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+
+.container{
+    width:93vw;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 22px 4px rgba(255, 32, 32, 0.25);
+    padding: 3vh;
+}
+
+.leftcontainer{
+    display: flex;
+    gap:1.7vw;
+}
+
+.logoright{
+    display: flex;
+    flex-direction: column;
+    gap:1.6vh;
+    color:#9C9C9C;
+}
+
+.logoright h1{
+    color:black;
+}
+
+.logoright .middle{
+    display: flex;
+    gap:2vw;
+    align-items: center;
+}
+
+.middle .location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.7vw;
+}
+.logoright .bottom{
+    display: flex;
+    gap:8vw;
+    color:#ED5353;
+}
+
+.rightcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.rightcontainer .skillsreq{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap:1vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skillsreq div{
+    background-color: #FFEEEE;
+    padding: 1vh;
+    font-size: small;
+    width:5vw;
+    height:3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-right: 0
+}
+
+.viewdetail{
+    width:10vw;
+    height:5vh;
+    background-color:#ED5353 ;
+    border:none;
+    color:white;
+    margin-left: 10vw;
+    cursor: pointer;
+}
+
+.buttoncontainer{
+    display: flex;
+    gap:1vw;
+}
+
+.editjob{
+    width:10vw;
+    height:5vh;
+    background-color:white;
+    border:1px solid #ED5353;
+    color:#ED5353;
+    margin-right: 0px;
+    cursor: pointer;
+}

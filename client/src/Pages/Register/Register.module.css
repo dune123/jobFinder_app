@@ -1,0 +1,30 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.container{
+    width:100vw;
+    height:100vh;
+    display: flex;
+}
+
+.leftcontainer{
+    width:57vw;
+}
+
+.rightcontainer{
+    width:43vw;
+}
+
+.rightcontainer img{
+    width:100%;
+    height: 100%;
+}
+
+.rightcontainer h1{
+    color:white;
+    position: absolute;
+    top:7vh;
+    right:7vw;
+}

@@ -1,0 +1,105 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color:  #FFEFEF;
+    height: 200vh;
+}
+
+.uppersubcontainer{
+    position: absolute;
+    background-color: white;
+    top:17vh;
+    width:80vw;
+    left:9vw;
+    font-size: 29px;
+    text-align: center;
+    padding:3vh;
+}
+
+.lowersubcontainer{
+    width:80vw;
+    margin-left:9vw;
+    margin-top:10vw;
+    background-color: white;
+    padding:3vh;
+}
+
+.lowersubcontainer .Topcontainer{
+    display: flex;
+    flex-direction: column;
+    gap:3vh;
+    margin-bottom: 5vh;
+}
+
+.Topcontainer .TopcontainerTop{
+    display: flex;
+    gap:1vw;
+    color:#999999;
+}
+
+.Topcontainer .Topmiddlecontainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Topmiddlecontainer .left{
+    display: flex;
+    flex-direction: column;
+    gap:1vh;
+}
+
+.Topmiddlecontainer .left h1{
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.location{
+    color: #ED5353;
+}
+
+.right button{
+    width:10vw;
+    height:5vh;
+    background-color: #ED5353;
+    color:white;
+    border-radius: 2px;
+    border:none;
+    cursor:pointer;
+}
+
+.topbottomcontainer{
+    display: flex;
+    gap:2vw;
+}
+
+.stipend{
+    display: flex;
+    flex-direction: column;
+    gap:1vh;
+}
+
+.duration{
+    display: flex;
+    flex-direction: column;
+    gap:1vh;
+}
+
+.bottomcontainer{
+    display: flex;
+    flex-direction: column;
+    gap:3vh;
+    
+}
+
+.bottomcontainer .aboutcompany{
+    display: flex;
+    flex-direction: column;
+    gap:3vh;
+}
+

@@ -1,0 +1,128 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+
+.container{
+    width:95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1vh;
+    box-shadow: 0px 0px 22px 4px rgba(255, 32, 32, 0.25);
+    padding-bottom: 2.5vh;
+}
+
+.container .searchBar{
+    margin-top:2vh;
+    width:84.5%;
+    color:#E3E3E3;
+    margin-right:4.8vw;
+}
+
+.searchBar input{
+    width: 100%;
+    height:6vh;
+    padding-left: 3vw;
+    border:2px solid #E3E3E3;
+}
+
+
+.searchicon {
+    position: relative;
+    left:1.1vw;
+    top:5vh;
+    font-size: 20px;
+}
+
+.bottomcontainer{
+    width:90%;
+}
+
+.bottomcontainer{
+    display: flex;
+    gap:8.3vw;
+}
+
+.bottomcontainer .bottomleft{
+    width:60%;
+    min-width:5.5vh;
+    display: flex;
+    gap:2vw;
+}
+
+.bottomleft .addskills{
+    width:11vw;
+    height:5.5vh;  
+}
+
+.addskills input{
+    width:100%;
+    height:100%;
+    border-radius: 3px;
+    border:2px solid #E3E3E3;
+    padding-left: 1vw;
+    height:4.5vh;
+}
+
+.buttons{
+    display: flex;
+    height:6vh;
+    gap:4vw;
+}
+
+.buttons button{
+    width:8vw;
+    background-color: #ED5353;
+    border:none;
+}
+
+.skillcontainer{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr); /* Three columns with equal width */
+    grid-gap: 1vw;
+    grid-row: 1vh; 
+}
+
+.skillcontainer div{
+    background-color:#FFEEEE ;
+    display: flex;
+    justify-content: space-between;
+    height:4vh;
+    width:8vw;
+
+}
+
+.skillcontainer div .skillname{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5vh;
+}
+
+.skillcontainer div span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF6B6B;
+    color: white;
+    padding:.5vh;
+    height:4vh;
+    cursor: pointer;
+    width:2vw;
+}
+
+.singlebutton{
+    height:6vh;
+    margin-left:12vw;
+}
+
+.singlebutton button{
+    height:100%;
+    width:12vw;
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

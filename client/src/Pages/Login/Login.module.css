@@ -1,0 +1,27 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+
+.container{
+    display: flex;
+    width:100vw;
+    height:100vh;
+}
+
+.leftcontainer{
+    width:57vw;
+}
+
+.rightcontainer img{
+    width:43vw;
+    height:100%;
+}
+
+.rightcontainer h1{
+    color:white;
+    position: absolute;
+    top:7vh;
+    right:7vw;
+}
