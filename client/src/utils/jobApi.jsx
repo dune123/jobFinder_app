@@ -28,9 +28,10 @@ const getAllJobPost=async(filter)=>{
 
 export const getJobDetailsById = async (jobId) => {
     try {
-        const reqUrl = `${backendUrl}/job-details/${jobId}`;
+        const reqUrl = `${baseurl}/job-details/${jobId}`;
         const response = await axios.get(reqUrl);
-        return response.data;
+        return response.data
+
     } catch (error) {
         console.log(error);
         // toast something went wrong please try after sometime

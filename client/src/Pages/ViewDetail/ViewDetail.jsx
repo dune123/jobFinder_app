@@ -2,25 +2,18 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import styles from "./ViewDetail.module.css";
 import { useNavigate, useParams } from "react-router-dom";
-import { getJobDetailsById } from "../../utils/jobApi";
+import {getJobDetailsById} from "../../utils/jobApi"
 
-const ViewDetail = ({}) => {
-    let {id}=useParams()
+const ViewDetail = () => {
+    let {jobId}=useParams()
+
     const navigate=useNavigate()
-
     const [jobDetails,setJobDetails] = useState(null)
     const [isEditable,setIsEditable]=useState(false)
 
-    useEffect(()=>{
-        isAllowedToEdit();
-        fetchJobDetailById();
-    },[])
-
     const fetchJobDetailById=async()=>{
-        if(!id) return;
-        const response=await getJobDetailsById(id);
+        const response=await getJobDetailsById(jobId);
         setJobDetails(response.data);
-        console.log(response.data)
     }
 
     const isAllowedToEdit = () => {
@@ -29,11 +22,13 @@ const ViewDetail = ({}) => {
             setIsEditable(true);
         }
     };
-    console.log(jobDetails)
-
+    useEffect(()=>{
+      fetchJobDetailById();
+  },[])
+  console.log(jobDetails)
   return (
-    <div className={styles.container}>
-      <Navbar />
+    /*<div className={styles.container}>
+     <Navbar />
       <div className={styles.uppersubcontainer}>
         <p>
           WordPress Development work from home job/internship at Adyaka Infosec
@@ -100,7 +95,7 @@ const ViewDetail = ({}) => {
               a mobile-friendly website
             </div>
           </div>
-          <div className={styles.skills}>
+          <div className={styles.skills}> 
             <p style={{fontWeight:"500"}}>Skills Required</p>
             <div className={styles.skills}>
 
@@ -109,6 +104,9 @@ const ViewDetail = ({}) => {
           <div className={styles.additonalinfo}></div>
         </div>
       </div>
+    </div>*/
+    <div>
+
     </div>
   );
 };
