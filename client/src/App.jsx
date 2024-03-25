@@ -5,7 +5,7 @@ import {Route,Routes} from "react-router-dom"
 import Addjob from './Pages/Addjob/Addjob'
 import Jobfinder from './Pages/Jobfinder/Jobfinder'
 import ViewDetail from './Pages/ViewDetail/ViewDetail'
-
+import ProtectedRoute from './components/ProtectedRoute'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,7 +15,7 @@ function App() {
       <Routes>
       <Route path='/register' element={<Register/>}/>
       <Route path="/login" element={<LogIn/>}/>
-      <Route path="/addjob" element={<Addjob/>}/>
+      <Route path="/addjob" element={<ProtectedRoute Component={Addjob} />}/>
       <Route path="/job-details/:jobId" element={<ViewDetail/>}/>
       <Route path="/" element={<Jobfinder/>}/>
     </Routes>

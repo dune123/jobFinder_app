@@ -39,12 +39,16 @@ const CompanyData = ({ item }) => {
         {token ? (
           <div className={styles.buttoncontainer}>
             <button className={styles.editjob}>Edit job</button>
-            <button className={styles.viewdetail}>View Detail</button>
+            <button className={styles.viewdetail}
+            onClick={()=>{
+            console.log(`navigate to viewdetail`)
+            navigate(`/job-details/${item._id}`)}}
+            >View Detail</button>
           </div>
         ) : (
           <button className={styles.viewdetail} onClick={()=>{
-            navigate(`/job-details/${item._id}`)
             console.log(`navigate to viewdetail`)
+            navigate(`/job-details/${item._id}`)
           }}>View Detail</button>
         )}
       </div>

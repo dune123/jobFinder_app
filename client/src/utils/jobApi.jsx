@@ -31,11 +31,24 @@ export const getJobDetailsById = async (jobId) => {
         const reqUrl = `${baseurl}/job-details/${jobId}`;
         const response = await axios.get(reqUrl);
         return response.data
-
     } catch (error) {
         console.log(error);
         // toast something went wrong please try after sometime
     }
 };
 
+export const updateJobById=async(jobId,updatedFormData, userId)=>{
+    try {
+        const reqURL=`${baseurl}/update/${jobId}`
+        const token = localStorage.getItem("token");
+        axios.defaults.headers.common["Authorization"]=token
+        const response=await axios.put(reqURL,{
+            ...updatedFormData,
+            userId
+        })
+        return response.data;
+    } catch (error) {
+        console.log(error);
+    }
+}
 export {addjob,getAllJobPost}

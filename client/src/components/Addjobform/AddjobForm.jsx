@@ -1,23 +1,27 @@
 import React, { useState } from "react";
 import styles from "./AddjobForm.module.css";
-import { addjob } from "../../utils/jobApi";
+import { addjob ,updateJobById} from "../../utils/jobApi";
+import { useNavigate,useLocation } from "react-router-dom";
 
 const AddjobForm = () => {
+  const {state}=useLocation()
+  const [stateData] = useState(state?.jobDetails);
   const [addjobform,setAddjobform]=useState({
-    companyName:"",
-    logoUrl:"",
-    role:"",
-    descriptionAboutCompany:"",
-    informationAboutJob:"",
-    salary:"",
-    location:"",
-    duration:"",
-    remoteOrOffice:"",
-    information:"",
-    skills:[],
+    companyName:""||stateData?.companyName,
+    logoUrl:""||stateData?.logoUrl,
+    role:""||stateData?.role,
+    descriptionAboutCompany:""||stateData?.descriptionAboutCompany,
+    informationAboutJob:""||stateData?.informationAboutJob,
+    salary:""||stateData?.salary,
+    location:""||stateData?.location,
+    duration:""||stateData?.duration,
+    remoteOrOffice:""||stateData?.remoteOrOffice,
+    information:""||stateData?.information,
+    skills:stateData?.skills||[],
   })
+  console.log(stateData.skills)
   const [currentskills,setCurrentskills] = useState("");
-
+  const navigate=useNavigate()
 
   const addskills=()=>{
     if(currentskills.trim()!==""){
@@ -34,6 +38,12 @@ const AddjobForm = () => {
   }
 
   const handlesumbit=(addjobform)=>{
+    if(state?.edit){
+      const userId=localStorage.getItem('userID')
+      updateJobById(stateData?._id, addjobform, userId)
+      navigate("/");
+      return;
+    }
     addjob(addjobform)
     setAddjobform({
       companyName:"",
@@ -49,8 +59,17 @@ const AddjobForm = () => {
       skills:[],
     })
     setCurrentskills("")
+    navigate("/")
   }
-
+  const handleRemoveSkill=(index)=>{
+    const updatedskills=[...addjobform.skills];
+    updatedskills.splice(index,1);
+    setAddjobform(prev=>({
+      ...prev,
+      skills:updatedskills
+    })
+    )
+  }
   return (
     <div className={styles.container}>
       <div className={styles.heading}>
@@ -195,7 +214,8 @@ const AddjobForm = () => {
             {
               addjobform.skills.length>0&&addjobform.skills.map((element,index)=>(
                 <div className={styles.diffskills} key={index}>
-                  {element}
+                  <div>{element}</div>
+                  <span onClick={handleRemoveSkill(index)}>X</span>
                 </div>
               ))
             }
@@ -219,7 +239,7 @@ const AddjobForm = () => {
       </div>
       <div className={styles.buttons}>
       <button style={{color:"#C2C2C2",background:"white",border:"1px solid #C2C2C2"}}>Cancel</button>
-      <button style={{color:"white",background:"#ED5353"}} onClick={()=>handlesumbit(addjobform)}>Add job</button>
+          <button style={{color:"white",background:"#ED5353"}} onClick={()=>handlesumbit(addjobform)}>{state?.edit?"Edit job":"Add Job"}</button>
       </div>
     </div>
   );

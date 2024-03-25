@@ -5,7 +5,6 @@ import JobTypeCard from "../../components/JobTypeCard/JobTypeCard"
 import CompanyData from '../../components/CompanyData/CompanyData'
 import {getAllJobPost} from "../../utils/jobApi"
 import { useSelector, useDispatch } from 'react-redux';
-import { addSkill, removeSkill } from "../../actions/searchSkillAction"
 
 const Jobfinder = () => {
   const [data,setData]=useState(null)

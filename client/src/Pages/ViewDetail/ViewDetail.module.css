@@ -103,3 +103,24 @@
     gap:3vh;
 }
 
+.skillsreq{
+    display: flex;
+    flex-direction: column;
+    gap:1vh;
+}
+
+.skills {
+    display: flex;
+    gap:1vw;
+    height: 5vh;
+}
+
+.skills div{
+    width: auto;
+    border-radius: 3vh;
+    background-color: #FFEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:1vh;
+}

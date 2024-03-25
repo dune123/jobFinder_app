@@ -121,7 +121,6 @@ const updateJobDetailsById = async (req, res, next) => {
             !location ||
             !duration ||
             !remoteOrOffice ||
-            !information||
             !skills
         ) {
             return res.status(400).json({
